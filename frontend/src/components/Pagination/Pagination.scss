@@ -1,0 +1,51 @@
+@import '../../assets/index.scss';
+
+.pagination-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  padding: 50px 0px 100px;
+
+  .pagination {
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid $gray-color2;
+    border-radius: 100px;
+
+    li {
+      display: inline-block;
+      button {
+        padding-left: 16px;
+        padding-right: 16px;
+        cursor: pointer;
+        border: none;
+        background-color: transparent;
+        color: $gray-color2;
+        width: 49px;
+
+        &.selected {
+          color: $main-color;
+          font-weight: 700;
+          border: 3px solid $main-color;
+          height: 49px;
+          margin-right: 0;
+        }
+
+        &:hover{
+          color : $main-color;
+        }
+      }
+    }
+  }
+  .arrow-button {
+    padding: 0;
+    background-color: transparent;
+  }
+  .arrow {
+    height: 55px;
+    margin: 0px;
+    cursor: pointer; 
+  }
+  
+}

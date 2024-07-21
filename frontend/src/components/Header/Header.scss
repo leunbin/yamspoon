@@ -1,0 +1,115 @@
+@import '../../assets/index.scss';
+
+header {
+    background-color: $main-color;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    .headerInner{
+        min-width: 77%;
+        width: auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    
+    .logo {
+        width: 170px;
+        height: 42px;
+    }
+    
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 80%;
+        gap: 15px;
+        
+        .nav {
+            white-space: nowrap;
+            
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            gap:22px;
+
+            .text {
+                font-size: 16px;
+                text-decoration: none;
+                color: $cream-color;
+
+                white-space: nowrap;
+                transition: all 0.3s;
+                cursor: pointer;
+
+                &:hover{
+                    font-size: 18px;
+                }
+            }
+        }
+
+        .right-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap:35px;
+
+            .searchContainer{
+                position: relative;
+                display: flex;
+                white-space: nowrap;
+    
+                input.search-cotainer {
+                    width: auto;
+                    min-width: 308px;
+                    border-radius: 100px;
+                    font-size: 16px;
+                    border:none;
+                    padding: 12px 26px;
+                }
+                
+                .search-icon{
+                    position: absolute;
+                    top: 50%;
+                    right: 26px;
+                    transform: translateY(-50%);
+    
+                }
+            }
+    
+            .mypage-icon{
+                width: 24px;
+                height: 25px;
+                transition: all 0.3s;
+                cursor: pointer;
+
+                &:hover{
+                    width: 28px;
+                    height: 29px;
+                    transition: all 0.3s;
+                }
+            }
+    
+            .login{
+                border: 1px solid $cream-color;
+                padding: 12px 21px;
+                white-space: nowrap;
+                transition: all 0.3s;
+
+                &:hover{
+                    background-color: $cream-color;
+                    color: $main-color;
+                    transition: all 0.3s;
+                }
+            }
+        }
+        
+    }
+
+}

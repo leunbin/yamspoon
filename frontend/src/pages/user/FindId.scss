@@ -1,0 +1,41 @@
+@import '../../assets/index';
+
+.findid-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.findid-title {
+  margin: 40px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: $main-color;
+    font-weight: 500;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+}
+
+.findid-button {
+  margin: 30px 0 40px 0;
+}

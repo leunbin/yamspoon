@@ -1,0 +1,93 @@
+@import '../../assets/index.scss';
+
+.inner{
+	width: 77%;
+	margin: 0 auto;
+	padding-bottom: 0px;
+
+	.titleBox{
+		text-align: center;
+		box-sizing: border-box;
+		padding: 67px;
+		
+
+		h2{
+			font-size: 36px;
+			font-weight: 800;
+		}
+	}
+
+	.userBox{
+		box-sizing: border-box;
+		padding-bottom: 40px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		border-bottom: 1px solid #cecece;
+
+		p{
+			font-size: 26px;
+			font-weight: normal;
+
+			span{
+				font-weight: 800;
+				font-size: 31px;
+			}
+		}
+
+		.edit{
+			padding: 16px 26px;
+			transition: 0.3s;
+
+			&:hover{
+				background: $main-color;
+				color: $cream-color;
+				transition: 0.3s;
+			}
+		}
+	}
+}
+
+
+.listInner{
+	width: 80%;
+	margin: 0 auto;
+
+	.saveListBox{
+		box-sizing: border-box;
+		padding: 100px 0px;
+		width: 100%;
+
+		h2.title{
+			font-weight: 700;
+			font-size: 26px;
+			width: 95%;
+			margin: 0 auto 54px;
+		}
+
+    &.top{
+      border-bottom: 1px solid #cecece;
+      padding-top: 50px;
+    }
+	}
+
+}
+
+.empty{
+	width: 95%;
+	height: 430px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	padding:20px;
+	border-radius: 44px;
+	border: 1px solid #c2c2c2;
+	margin:0 auto;
+
+	p{
+		font-size: 36px;
+		font-weight: 500;
+		color: $gray-color2;
+	}
+}

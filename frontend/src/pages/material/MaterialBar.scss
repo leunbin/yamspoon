@@ -1,0 +1,77 @@
+@import '../../assets/index.scss';
+
+.bar--container {
+
+    .button--box{
+        width: 100%;
+        display: flex;
+        justify-content: flex-start;
+        gap: 11px;
+        padding-top: 15px;
+        padding-bottom: 15px;
+        border-top: 1px solid $gray-color2;
+        border-bottom: 1px solid $gray-color2;
+        box-sizing: border-box;
+
+        .all{
+            color: black;
+            border: none;
+            font-weight: 500;
+            margin-left: 0px;
+            background: none;
+            white-space: nowrap;
+        }
+    }
+
+    .main--bar {
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    .sub--bar {
+        background-color: rgba(211, 35, 58, 0.1);
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        :first-child {
+            margin-left: 25px;
+        }
+        
+        button {
+            color: $gray-color2;
+            font-weight: 400;
+            background-color: rgba(211, 35, 58, 0);
+            margin: 0;
+            padding: 25px 16px;
+            box-sizing: border-box;
+
+
+            &.selected {
+                color: $main-color;
+                font-weight: 700; 
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset : 6px;
+            }
+
+            &:hover{
+                color: $main-color;
+                font-weight: 700;
+                text-decoration: underline;
+                text-decoration-thickness: 2px;
+                text-underline-offset : 6px;
+            }
+        }        
+    }
+    
+}
+
+.arrow {
+    height: 50px;
+    + button {
+        margin-left: 12px;
+    }
+}

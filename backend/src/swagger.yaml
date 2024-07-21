@@ -1,0 +1,532 @@
+openapi: 3.0.0
+info:
+  version: 1.0.0
+  title: YAMSpoon
+  description: YAMSpoon
+servers:
+  # Added by API Auto Mocking Plugin
+  # Added by API Auto Mocking Plugin
+  - description: SwaggerHub API Auto Mocking
+    url: https://virtserver.swaggerhub.com/SILVERBIN2105_1/YAMSpoon/1.0.0
+  - description: SwaggerHub API Auto Mocking
+    url: http://kdt-sw-8-team06.elicecoding.com/
+tags: 
+  - name: user
+  - name: recipe
+  - name: ingredients
+  - name: recipe_category
+  - name: ingredients_category
+paths:
+  '/user/{id}':
+    get:
+      tags: 
+        - user
+      summary: get userInfo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '404':
+          description: User not found
+    put:
+      tags: 
+        - user
+      summary: update userInfo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/User'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+    delete:
+      tags:
+        - user
+      summary: delete userInfo
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '500':
+          description: Interal Server Error
+  /user:
+    post:
+      tags: 
+       - user
+      summary: create userInfo
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '500':
+          description: Internal Server Error
+  /login:
+    post:
+      tags:
+        - user
+      summary: login
+      requestBody:
+        $ref: '#/components/requestBodies/Login'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '500':
+          description: Internal Server Error
+  /logout:
+    post:
+      tags:
+        - user
+      summary: logout
+      requestBody:
+        $ref: '#/components/requestBodies/User'
+      responses:
+        '200':
+          description: OK
+        '500':
+          description: Internal Server Error
+  '/user/{id}/fridge':
+    get:
+      tags:
+        - user
+      summary: user fridge
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+        '404':
+          description: Not Found
+    put:
+      tags:
+        - user
+      summary: change ingredients
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/User'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '404':
+          description: Not Found
+  '/user/{id}/bookmark':
+    put:
+      tags:
+        - user
+      summary: change bookmark
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        $ref: '#/components/requestBodies/User'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '404':
+          description: Not Found
+  /find-userid:
+    post:
+      tags:
+        - user
+      summary: find userId
+      requestBody:
+        $ref: '#/components/requestBodies/FindId'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '404':
+          description: Not Found      
+  /find-password:
+    post:
+      tags:
+        - user
+      summary: find password
+      requestBody:
+        $ref: '#/components/requestBodies/FindPassword'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/USER'
+        '404':
+          description: Not Found      
+          
+  /recipes:
+    get:
+      tags:
+        - recipe
+      summary: get all recipes
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  '/recipes/{ingredientId}':
+    get:
+      tags:
+        - recipe
+      summary: get recipes by ingredientId
+      parameters:
+        - name: ingredientId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  '/recipes/{categoryId}':
+    get:
+      tags:
+        - recipe
+      summary: get recipes by categoryId
+      parameters:
+        - name: categoryId
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  '/recipes/{Id}':
+    get:
+      tags:
+        - recipe
+      summary: get recipe by Id
+      parameters:
+        - name: Id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  '/recipes/{id}/like':
+    put:
+      tags:
+        - recipe
+      summary: Count like num
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: string
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/RECIPE'
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE'
+        '400':
+          description: Bad Request
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  '/recipes/search':
+    get:
+      tags:
+        - recipe
+      summary: count like num
+      parameters:
+        - name: keyword
+          in: query
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE'
+        '400':
+          description: Bad Request
+        '401':
+          description: Unauthorized
+        '404':
+          description: Not Found
+        '500':
+          description: Internal Server Error
+  /ingredients:
+    get:
+      tags: 
+       - ingredients
+      summary: get ingredientsInfo
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/INGREDIENTS'
+        '500':
+          description: Internal Server Error
+  /recipeCategory:
+    get:
+      tags: 
+       - recipe_category
+      summary: get recipeCategoryInfo
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/RECIPE_CATEGORY'
+        '500':
+          description: Internal Server Error
+  /ingredientsCategory:
+    get:
+      tags: 
+       - ingredients_category
+      summary: get ingredientsCategoryInfo
+      responses:
+        '201':
+          description: OK
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/INGREDIENTS_CATEGORY'
+        '500':
+          description: Internal Server Error
+components:
+  schemas:
+    USER:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        email:
+          type: string
+        password:
+          type: string
+        nickname:
+          type: string
+        isAdmin:
+          type: boolean
+        recipe:
+          type: array
+          items:
+            type: string
+        ingredients:
+          type: array
+          items:
+            type: string
+    RECIPE:
+      type: object
+      properties:
+        id:
+          type: string
+        name:
+          type: string
+        description:
+          type: string
+        content:
+          type: string
+        ingredients:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+        sauce:
+          type: array
+          items:
+            type: object
+            properties:
+              key:
+                type: string
+              value:
+                type: string
+        like:
+          type: number
+        category:
+          type: string
+        img:
+          type: string
+    INGREDIENTS:
+      type: object
+      properties:
+        name:
+          type: string
+        category:
+          type: string
+    RECIPE_CATEGORY:
+      type: object
+      properties:
+        category:
+          type: string
+    INGREDIENTS_CATEGORY:
+      type: object
+      properties:
+        category:
+          type: string
+  requestBodies:
+    User:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/USER'
+      required: true
+    Recipe:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/RECIPE'
+      required: true
+    Login:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              userid:
+                type: string
+              userpassword:
+                type: string
+            required:
+              - userid
+              - userpassword
+    FindId:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              name:
+                type: string
+              email:
+                type: string
+              ceritificationNum:
+                type: string
+            required:
+              - name
+              - email
+              - ceritificationNum
+              
+    FindPassword:
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              userId:
+                type: string
+              email:
+                type: string
+              ceritificationNum:
+                type: string
+            required:
+              - userId
+              - email
+              - ceritificationNum

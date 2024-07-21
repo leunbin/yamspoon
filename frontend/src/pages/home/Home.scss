@@ -1,0 +1,65 @@
+@import '../../assets/index.scss';
+
+.banner-container {
+    margin-top: 80px;
+
+    .banner {
+        height: auto;
+        width: 77%;
+        margin: auto;
+        border-radius: 44px;
+        position: relative;
+
+        img {
+            width: 100%;
+        }
+        .banner-button {
+            position: absolute;
+            width: 380px;
+            padding: 20px 43px;
+            font-weight: bold;
+            font-size: 20px;
+            margin-bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 100px;
+        }
+    }
+}
+
+
+.middle-line{
+    width: 77%;
+    height: 1px;
+    background: #C2C2C2;
+    margin: 82px auto 0;
+}
+
+.recipe-container {
+    width: 80%;
+	margin: 0 auto;
+    box-sizing: border-box;
+    
+    margin: auto;
+    padding-top: 82px;
+
+    .title {
+        font-weight: 700;
+        font-size: 26px;
+        width: 95%;
+        margin: 0 auto 54px;
+    }
+
+}
+
+
+
+@media screen and (max-width: 1200px) {
+    .recipe-items2{
+        flex-wrap: wrap;
+    }
+
+    .recipe-items{
+        flex-wrap: wrap;
+    }
+}

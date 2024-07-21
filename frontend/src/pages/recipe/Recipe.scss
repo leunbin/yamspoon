@@ -1,0 +1,238 @@
+@import '../../assets/index.scss';
+
+.recipeInner{
+    width: 66%;
+    margin: 0 auto;
+    padding-bottom: 100px;
+}
+
+.recipeTop{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 114px;
+    margin-top: 100px;
+
+    .recipeImgBox{
+        width: 40%;
+        
+
+        .recipeImg{
+            width: 100%;
+            border-radius: 44px;
+            margin-bottom: 32px;
+            height: 469px;
+
+            img{
+                width: 100%;
+                border-radius: 44px;
+                height: 100%;
+            }
+        }
+        
+        .saveAndLikes{
+            text-align: center;
+            display: flex;
+            justify-content: center;
+
+            button{
+                background: none;
+                color: $common-color;
+                padding: 0px;
+                border-radius: 0px;
+                margin-top: 0px;
+                flex-direction: row;
+                gap: 10px;
+
+                &.saveBtn{
+                    margin-right: 18px;
+                    box-sizing: border-box;
+                    padding-right: 18px;
+                    border-right: 1px solid #cecece;
+
+                    svg{
+                        color: $gray-color2;
+                    }
+
+                    svg:hover path{
+                        fill: $gray-color2;
+                    }
+                }
+
+                &.likesBtn{
+                    svg{
+                        color: $main-color;
+                    }
+
+                    svg:hover path{
+                        fill: $main-color;
+                    }
+                }
+
+                svg{
+                    display: inline-block;
+                    width: 22px;                    
+                }
+                
+                span{
+                    display: inline-block;
+                    font-size: 21px;
+                    font-weight: 500;
+
+                    &:hover{
+                        text-decoration: underline;
+                    }
+                }
+
+                
+            }
+        }
+    }
+
+    
+    .recipeInfo{
+        width: 54%;
+
+        .categoryBox{
+          display: flex;
+          align-items: center;
+          margin-bottom: 15px;
+
+          p.category{
+            color: $main-color;
+            font-size: 16px;
+            box-sizing: border-box;
+            padding: 7px 26px;
+            display: inline-block;
+            border-radius: 100px;
+            border: 1px solid $main-color;
+          }
+
+          p.creator {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+            color: #8a8a8a;
+            font-size: 14px;
+
+            svg {
+              width: 18px;
+              margin-right: 3px;
+            }
+          }
+        }
+
+        h3.recipeName{
+            font-size: 31px;
+            font-weight: 700;
+            line-height: 1.5;
+            margin-bottom: 20px;
+        }
+
+        p.recipeText{
+            font-size: 16px;
+            color: #8a8a8a;
+            line-height: 1.5;
+        }
+    }
+}
+
+.recipeDetailBox{
+
+    .marterialAndSauce{
+        margin-bottom:114px;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+
+        .Boxs{
+            width: 46.6%;
+
+            h4{
+                font-size: 21px;
+                font-weight: 500;
+                margin-bottom: 15px;
+            }
+
+            ul{
+                width: 100%;
+                overflow: hidden;
+                border-radius: 44px;
+                box-sizing: border-box;
+                padding: 42px;
+
+                &.material{
+                    border: 5px solid $sub-color;
+                }
+
+                &.sauce{
+                    border: 5px solid $main-color;
+                }
+
+                li{
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    span{
+                        display: inline-block;
+                        font-size: 18px;
+                        font-weight: 500;
+                        line-height: 1.5;
+
+                        svg{
+                            width: 20px;
+                            margin-right: 26px;
+                            vertical-align: middle;
+                        }
+                    }
+
+                    &:not(:last-child){
+                        margin-bottom: 20px;
+                    }
+                }
+
+                
+            }
+
+        }
+    }
+
+    .recipeTextBox{
+        width: 100%;
+
+        h4{
+          font-size: 21px;
+          font-weight: 500;
+          margin-bottom: 15px;
+        }
+
+        p{
+          font-size: 18px;
+          line-height: 2.0;
+
+          span.num {
+            color: $main-color;
+            display: inline-block;
+            width: 3%;
+          }
+        }
+    }
+}
+
+.recipeButtons{
+  display: flex;
+  justify-content: center;
+  margin-top: 100px;
+
+  button{
+    width: 150px;
+
+    &.delete{
+      margin-top: 0px;
+      margin-left: 10px;
+    }
+  }
+}
+

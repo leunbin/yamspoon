@@ -1,0 +1,40 @@
+@import '../../assets/index.scss';
+
+.top-button{
+  width: 49px;
+  height: 49px;
+  background: $cream-color;
+  border-radius: 100%;
+  box-shadow: 0px 4px 20px #00000018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  position: fixed;
+  right: 20px;
+  bottom: 3%;
+
+  padding: 0px;
+
+  svg{
+    color: $main-color;
+    width: 30px;
+  }
+}
+
+.plus-button {
+  width: 49px;
+  height: 49px;
+  border-radius: 100%;
+  box-shadow: 0px 4px 20px #00000018;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  
+  position: fixed;
+  right: 20px;
+  bottom: 11%;
+  
+
+  padding: 0;
+}

@@ -1,0 +1,75 @@
+@import '../../assets/index';
+
+.signin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+.signin-title {
+  margin: 40px 0;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  margin-bottom: 15px;
+
+  label {
+    display: block;
+    margin-bottom: 10px;
+    color: $main-color;
+    font-weight: 500;
+  }
+
+  input {
+    margin-bottom: 10px;
+  }
+
+  button {
+    margin-bottom: 10px;
+  }
+}
+
+.signin-button {
+  margin: 30px 0 20px 0;
+}
+
+.link-container {
+  display: flex;
+  justify-content: space-between;
+  width: 400px;
+  margin-bottom: 60px;
+  font-size: 14px;
+
+  a {
+    font-weight: 500;
+    transition: .3s;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  .find-container {
+    a {
+      font-weight: 400;
+      color: $gray-color2;
+      transition: .3s;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+
+    .separator {
+      color: $gray-color2;
+      margin: 0 10px;
+    }
+  }
+}
+

@@ -1,0 +1,118 @@
+@import '../../assets/index.scss';
+
+.material-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    .title {
+        font-weight: 700;
+        font-size: 36px;
+        height: 174px;
+        display: flex;
+        align-items: center;
+    }
+    
+    .materialbar-container {
+        width: 77%;
+    }
+    
+}
+
+
+
+.result {
+    width: 77%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-top: 99px;
+    p {
+        font-size: 26px;
+        font-weight: bold;
+> span {
+            color: $main-color;
+        }
+    }
+    select {
+        margin-left: auto;
+    }
+}
+
+.no-recipe{
+    width: 77%;
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border: $gray-color2 1px solid;
+    border-radius: 44px;
+
+    p {
+        font-size: 36px;
+        font-weight: 500;
+        color: $gray-color2;
+        margin: 192px auto;
+    }
+}
+
+.ListWrapper {
+    margin-top: 54px;
+    width: 77%;
+    
+    .RecipeList {
+        display: flex;
+        row-gap: 54px;
+        flex-wrap: wrap;
+        
+        .Recipe-container {
+            display: flex;
+            width: 100%;
+            flex-wrap: nowrap;
+            gap: 35px;
+
+            .RecipeItem {
+                width: 23%;
+                height: 428px;
+                cursor: pointer;
+    
+                &:hover .ItemImage{
+                    transform: scale(1.1);
+                    transition: all 0.5s;
+                }
+    
+                .item-img{
+                    overflow: hidden;
+                    border-radius: 44px;
+                    .ItemImage {
+                        width: 100%;
+                        height: 324px;
+                        transition: all 0.5s;
+                    }
+                }
+    
+                
+                p {
+                    font-size: 20px;
+                    font-weight: bold;
+                    margin-top: 27px;
+                }
+                span {
+                    margin-top: 27px;
+                    display: flex;
+                    font-size: 19px;
+                
+                    svg {
+                        width: 19px;
+                        margin-right: 10px;
+                        color: $main-color;
+                    }
+                }
+            }
+        }
+ 
+    }
+    
+}

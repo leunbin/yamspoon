@@ -1,0 +1,52 @@
+@import '../../assets/index.scss';
+
+// 스와이퍼 스타일
+.popularItemSwiper{
+    box-sizing: border-box !important;
+    padding: 0 25px !important;
+}
+
+// 슬라이드 화살표 스타일
+.swiper-button-prev{
+    width: 49px  !important;
+    height: 49px  !important;
+    background: $cream-color !important;
+    box-shadow: 0px 4px 10px #00000025 !important; 
+    border-radius: 100% !important;
+
+    left: 5px !important;
+    top: 36% !important;
+
+    ion-icon{
+        color: $main-color !important;
+        font-size: 30px !important;
+    }
+}
+
+.swiper-button-next{
+    width: 49px  !important;
+    height: 49px  !important;
+    background: $cream-color !important;
+    box-shadow: 0px 4px 10px #00000025 !important;
+    border-radius: 100% !important;
+
+    right: 5px !important;
+    top: 36% !important;
+
+    ion-icon{
+        color: $main-color !important;
+        font-size: 30px !important;
+    }
+}
+
+.swiper-button-prev:after{
+    content: url("../../components/Icons/left.svg") !important;
+    color: $main-color !important;
+    width: 30px !important; 
+}
+
+.swiper-button-next:after{
+    content: url("../../components/Icons/right.svg")  !important;
+    color: $main-color !important;
+    width: 30px !important;
+}

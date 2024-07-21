@@ -1,0 +1,18 @@
+@import '../../assets/index.scss';
+
+.login-header {
+    background-color: $main-color;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    padding-top: 36px;
+    padding-bottom: 36px;
+
+    .logo {
+        width: 203px;
+        height: 47px;
+    }
+}

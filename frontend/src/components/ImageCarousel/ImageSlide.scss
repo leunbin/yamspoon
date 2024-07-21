@@ -1,0 +1,142 @@
+@import '../../assets/index.scss';
+
+.imageSlider{
+	width: 100%;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative;
+
+	.imageSliderWrap{
+ 
+    display: flex;
+    gap: 35px;
+    align-items: flex-start;
+    justify-content: flex-start;
+    box-sizing: border-box !important;
+    padding: 0 25px !important;
+
+    width: 100%;
+    transition-property: transform;
+    transition-timing-function: var(--swiper-wrapper-transition-timing-function, initial);
+    box-sizing: content-box;
+
+    
+		.imageSlide{
+      flex-shrink: 0;
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transition-property: transform;
+      display: block;
+      width: 23%;
+      cursor: pointer;
+      transition-property: transform;
+
+      &:hover .recipe-img{
+
+        img{
+          transform:scale(1.1);
+          transition:all 0.5s;
+        }
+      }
+
+			.recipe-img{
+				border-radius: 44px;
+				width: 100%;
+				height: 324px;
+				min-height: 324px;
+				margin-bottom: 27px;
+        overflow: hidden;
+
+				img{
+					width: 100%;
+					height: 100%;
+					border-radius: 44px;
+          transition:all 0.5s;
+				}
+			}
+
+      .recipeName{
+				font-size: 20px;
+				font-weight: 700;
+				margin-bottom: 27px;
+				line-height: 1.5;
+				display: -webkit-box;
+				-webkit-line-clamp: 2; /* 표시할 최대 줄 수 */
+				-webkit-box-orient: vertical;
+				overflow: hidden;
+			}
+
+      .likes{
+				font-size: 19px;
+				display: flex;
+
+				svg{
+					color: $main-color;
+					margin-right: 10px;
+					width: 19px;
+				}
+			}
+		}
+  }
+
+
+  .arrow{
+    width: 49px;
+    height: 49px ;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1450980392) ;
+    border-radius: 100% ;
+    padding: 0px;
+    display: inline-block;
+    display: flex;
+    justify-content: center;  
+    align-items: center;
+    position: absolute;
+
+    svg{
+      width: 30px;
+    }
+
+  }
+
+  .prevBtn{
+    left: 5px;
+    top: 33%;
+  }
+
+  .nextBtn{
+    transform: rotate(180deg);
+    right: 5px;
+    top:33%;
+    margin-top: 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1450980392) ;
+  }
+}
+
+
+.ranking {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-size: 20px;
+  font-weight: 500;
+  text-align: center;
+  width: 30px;
+  height: 30px;
+  background-color: $main-color;
+  color: white;
+  padding: 20px 15px 15px 15px;
+  border-radius: 44px 0px;
+}
+
+
+// 슬라이드 갯수 반응형
+@media screen and (max-width: 1200px){
+
+    .imageSlider .imageSliderWrap .imageSlide{
+      width: 50%;
+    }
+
+}
+

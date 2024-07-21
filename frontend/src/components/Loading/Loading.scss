@@ -1,0 +1,32 @@
+@import '../../assets/index.scss';
+
+.innerBox{
+  position: relative;
+}
+
+.loading-overlay{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: $cream-color;
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .loading-spinner{
+        text-align: center;
+
+      .spinner{
+        margin-bottom: 25px;
+      } 
+      
+      p {
+        font-size: 20px;
+        color: $main-color;
+        font-weight: 700; 
+      }
+    }
+}
